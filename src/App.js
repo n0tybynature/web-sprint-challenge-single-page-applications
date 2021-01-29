@@ -6,6 +6,8 @@ import "./App.css"
 import * as yup from "yup"
 import axios from "axios"
 import schema from "./validation/formSchema"
+import PizzaForm from "./Form";
+import Order from "./Order"
 
 const initialPizzaForm = {
   style:"",
@@ -13,15 +15,17 @@ const initialPizzaForm = {
   sauce:"",
   instruction:"",
   pepperoni:false,
-  xtraCheese:false,
+  extraCheese:false,
   sausage:false,
   mushroom:false,
+  quantity:""
 }
 
 const initialPizzaErrors = {
   style:"",
   size:"",
   sauce:"",
+  quantity:"",
 }
 
 
@@ -77,7 +81,8 @@ const App = () => {
       size: pizzaValues.size,
       style: pizzaValues.style,
       sauce: pizzaValues.sauce,
-      toppings:["pepperoni", "mushroom", "extraCheese", "sausage"].filter(topping => pizzaValues(topping))
+      toppings:["pepperoni", "mushroom", "extraCheese", "sausage"].filter(topping =>{ return setPizzaValues[topping]}),
+      quantity:pizzaValues.quantity
     }
     getPizzaOrders(newPizza)
   }
@@ -103,7 +108,7 @@ const App = () => {
             <div className="nav-con">
               <ul>
                 <Link to="/">Home</Link> 
-                
+                <Link to="/Order">Orders</Link>
               </ul>
             </div>
 
@@ -124,7 +129,12 @@ const App = () => {
               />
 
             </Route>
+            <Route path="/Order">
+              <Order 
+              details={orders}
 
+              />
+            </Route>
 
             <Route exact path="/" component={Home}>
             </Route>

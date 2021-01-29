@@ -26,6 +26,10 @@ export default function PizzaForm(props){
       <div className="pfsubmit">
         <h2>Build a Pizza</h2>
         <img/>
+        <div className="namediv">
+          <h4>Name</h4>
+          <input type="text" onChange={onChange} name="name" value={values.name}/>
+        </div>
 
         <div className="stylediv">
           <h4>Style of Size</h4>
@@ -54,7 +58,7 @@ export default function PizzaForm(props){
             <select className="sizes" value={values.size} onChange={onChange} name="size">
               <option className="sizes" value="">Select an option</option>
               <option className="sizes" value="small">Small 8"</option>
-              <option className="sizes" value="mediumn">Medium 12"</option>
+              <option className="sizes" value="medium">Medium 12"</option>
               <option className="sizes" value="large">Large 16"</option>
               <option className="sizes" value="x-large">X-Large 20"</option>
             </select>
@@ -65,29 +69,29 @@ export default function PizzaForm(props){
           <h4>Choice of Sauce</h4>
           <div>{errors.sauce}</div>
           <label> Red Sauce
-          <input type="radio" onChange={onChange} name="sauce" value="redSauce"/>
+          <input type="radio" onChange={onChange}  value="redSauce" checked={values.sauce === "redSauce"} name="sauce"/>
           </label>
           <label> White Sauce
-          <input type="radio" onChange={onChange} name="sauce" value="whiteSauce"/>
+          <input type="radio" onChange={onChange}  value="whiteSauce" checked={values.sauce === "whiteSauce"} name="sauce"/>
           </label>
           <label> No Sauce
-          <input type="radio" onChange={onChange} name="sauce" value="noSauce"/>
+          <input type="radio" onChange={onChange}  value="noSauce" checked={values.sauce === "noSauce"} name="sauce"/>
           </label>
         </div>
 
         <div className="toppingdiv">
           <h4>Choice of Toppings</h4>
           <label>Pepperoni
-            <input type="checkbox" onChange={onChange} name="topping" value="pepperoni"/>
+            <input type="checkbox" onChange={onChange} name="pepperoni" checked={values.pepperoni}/>
           </label>
           <label>Xtra Cheese
-            <input type="checkbox" onChange={onChange} name="topping" value="extraCheese"/>
+            <input type="checkbox" onChange={onChange} name="extraCheese" checked={values.extraCheese}/>
           </label>
           <label>Sausage
-            <input type="checkbox" onChange={onChange} name="topping" value="sausage"/>
+            <input type="checkbox" onChange={onChange} name="sausage" checked={values.sausage}/>
           </label>
           <label>Mushroom
-            <input type="checkbox" onChange={onChange} name="topping" value="mushroom"/>
+            <input type="checkbox" onChange={onChange} name="mushroom" checked={values.mushroom}/>
           </label>
 
         </div>
@@ -95,6 +99,26 @@ export default function PizzaForm(props){
         <div className="instructdiv">
           <h4>Special Instructions</h4>
           <input type="text" onChange={onChange} name="instruction"/>
+        </div>
+
+        <div className="orderbutton">
+          <div className="quantitydiv">
+              <h4>Select Quantity:</h4>
+              <label>
+                <div>{errors.quantity}</div>
+                  <select value={values.quantity} onChange={onChange} name="quantity" >
+                    <option value="">Select Quantity</option>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                  </select>
+              </label>
+          </div>
+          <div>
+            <button disabled={disabled}> Submit Order</button>
+
+          </div>
         </div>
 
 
