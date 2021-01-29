@@ -26,6 +26,7 @@ describe("Pizza input test", () => {
         .type("Leave at door")
         .should("have.value","Leave at door")
       styleInput().check("chicago")
+      submitBtn().click({force:true})
     })
 
 
