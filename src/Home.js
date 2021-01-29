@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter, useHistory, Link} from "react-router-dom"
+import photo from "./photos/photo.jpg"
 
 export default function Home() {
   const history = useHistory();
@@ -12,7 +13,7 @@ export default function Home() {
     <div className='home-wrapper'>
       <img
         className='pizzaimage'
-        src='https://img-global.cpcdn.com/recipes/658cd407934ba702/1200x630cq70/photo.jpg'
+        src={photo}
         alt='pizzza'
         
       />

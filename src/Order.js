@@ -11,7 +11,9 @@ export default function Order({details}) {
     
     
     <div className="ordered">
-      
+
+       <img src=""/>
+        <h1>CONGRATS</h1>
 
       
       {

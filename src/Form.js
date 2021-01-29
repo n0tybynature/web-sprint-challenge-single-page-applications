@@ -59,12 +59,12 @@ export default function PizzaForm(props){
           <h4>Choice of Size</h4>
           <div>{errors.size}</div>
           <label>Select Size:
-            <select className="sizes" value={values.size} onChange={onChange} name="size">
-              <option className="sizes" value="">Select an option</option>
-              <option className="sizes" value="small">Small 8"</option>
-              <option className="sizes" value="medium">Medium 12"</option>
-              <option className="sizes" value="large">Large 16"</option>
-              <option className="sizes" value="x-large">X-Large 20"</option>
+            <select  value={values.size} onChange={onChange} name="size">
+              <option  value="">Select an option</option>
+              <option  value="small">Small 8"</option>
+              <option  value="medium">Medium 12"</option>
+              <option  value="large">Large 16"</option>
+              <option value="x-large">X-Large 20"</option>
             </select>
           </label>
         </div>
@@ -120,7 +120,7 @@ export default function PizzaForm(props){
               </label>
           </div>
           <div>
-            <button disabled={disabled}> Submit Order</button>
+            <button id="subbtn" disabled={disabled}> Submit Order</button>
 
           </div>
         </div>

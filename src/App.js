@@ -85,7 +85,7 @@ const App = () => {
       style: pizzaValues.style,
       sauce: pizzaValues.sauce,
       toppings:["pepperoni", "mushroom", "extraCheese", "sausage"].filter(topping =>{ return pizzaValues[topping]}),
-      
+      instruction: pizzaValues.instruction,
       quantity:pizzaValues.quantity
 
 
