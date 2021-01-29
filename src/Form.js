@@ -1,4 +1,7 @@
 import React from "react";
+import {useHistory} from "react-router-dom"
+
+
 
 export default function PizzaForm(props){
   const {
@@ -9,10 +12,11 @@ export default function PizzaForm(props){
     errors
   } = props
 
-
+  const history = useHistory()
   const onSubmit = evt => {
     evt.preventDefault()
     submit()
+    history.push("/Order")
   }
 
   const onChange = evt => {

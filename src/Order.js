@@ -1,4 +1,5 @@
 import React from "react";
+import Pizza from "./Pizza"
 
 export default function Order({details}) {
   if(!details){
@@ -7,15 +8,23 @@ export default function Order({details}) {
 
 
   return (
+    
+    
     <div className="ordered">
-      <h2>{details.name}</h2>
-      <p>{details.style}</p>
-      <p>{details.style}</p>
-      <p>{details.sauce}</p>
-      <p>{details.topping}</p>
-      <p>{details.instruction}</p>
-      <p>{details.quantity}</p>
+      
+
+      
+      {
+        details.map( pizza => {
+          return (
+                  <Pizza details={ pizza }/>
+              )
+          })
+      }
+      
+
     </div>
+    
   )
 
 

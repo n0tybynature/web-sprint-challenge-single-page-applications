@@ -10,6 +10,7 @@ import PizzaForm from "./Form";
 import Order from "./Order"
 
 const initialPizzaForm = {
+  name:"",
   style:"",
   size:"",
   sauce:"",
@@ -22,6 +23,7 @@ const initialPizzaForm = {
 }
 
 const initialPizzaErrors = {
+  name:"",
   style:"",
   size:"",
   sauce:"",
@@ -78,11 +80,15 @@ const App = () => {
 
   const pizzaSubmit = () => {
     const newPizza = {
+      name: pizzaValues.name,
       size: pizzaValues.size,
       style: pizzaValues.style,
       sauce: pizzaValues.sauce,
-      toppings:["pepperoni", "mushroom", "extraCheese", "sausage"].filter(topping =>{ return setPizzaValues[topping]}),
+      toppings:["pepperoni", "mushroom", "extraCheese", "sausage"].filter(topping =>{ return pizzaValues[topping]}),
+      
       quantity:pizzaValues.quantity
+
+
     }
     getPizzaOrders(newPizza)
   }
