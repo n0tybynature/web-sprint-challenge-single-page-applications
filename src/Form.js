@@ -29,17 +29,18 @@ export default function PizzaForm(props){
 
         <div className="stylediv">
           <h4>Style of Size</h4>
+          <div>{errors.style}</div>
           <label> Sicilian
-          <input type="radio" onChange={onChange} name="style"/>
+          <input type="radio" onChange={onChange} value="sicilian" checked={values.style === "sicilian"} name="style"/>
           </label>
           <label> Chicago
-          <input type="radio" onChange={onChange} name="style"/>
+          <input type="radio" onChange={onChange} value="chicago" checked={values.style === "chicago"} name="style"/>
           </label>
           <label> New York
-          <input type="radio" onChange={onChange} name="style"/>
+          <input type="radio" onChange={onChange} value="newyork" checked={values.style === "newyork"} name="style"/>
           </label>
           <label> Detriot
-          <input type="radio" onChange={onChange} name="style"/>
+          <input type="radio" onChange={onChange} value="detriot" checked={values.style === "detriot"} name="style"/>
           </label>
           
         </div>
@@ -48,43 +49,45 @@ export default function PizzaForm(props){
 
         <div className="sizediv">
           <h4>Choice of Size</h4>
+          <div>{errors.size}</div>
           <label>Select Size:
-            <select onChange={onChange} name="size">
-              <option value="">Select an option</option>
-              <option value="small">Small 8'</option>
-              <option value="mediumn">Medium 12'</option>
-              <option value="large">Large 16'</option>
-              <option value="x-large">X-Large 20'</option>
+            <select className="sizes" value={values.size} onChange={onChange} name="size">
+              <option className="sizes" value="">Select an option</option>
+              <option className="sizes" value="small">Small 8"</option>
+              <option className="sizes" value="mediumn">Medium 12"</option>
+              <option className="sizes" value="large">Large 16"</option>
+              <option className="sizes" value="x-large">X-Large 20"</option>
             </select>
           </label>
         </div>
 
         <div className="saucediv">
           <h4>Choice of Sauce</h4>
+          <div>{errors.sauce}</div>
           <label> Red Sauce
-          <input type="radio" onChange={onChange} name="sauce"/>
+          <input type="radio" onChange={onChange} name="sauce" value="redSauce"/>
           </label>
           <label> White Sauce
-          <input type="radio" onChange={onChange} name="sauce"/>
+          <input type="radio" onChange={onChange} name="sauce" value="whiteSauce"/>
           </label>
           <label> No Sauce
-          <input type="radio" onChange={onChange} name="sauce"/>
+          <input type="radio" onChange={onChange} name="sauce" value="noSauce"/>
           </label>
         </div>
 
         <div className="toppingdiv">
           <h4>Choice of Toppings</h4>
           <label>Pepperoni
-            <input type="radio" onChange={onChange} name="topping"/>
+            <input type="checkbox" onChange={onChange} name="topping" value="pepperoni"/>
           </label>
           <label>Xtra Cheese
-            <input type="radio" onChange={onChange} name="topping"/>
+            <input type="checkbox" onChange={onChange} name="topping" value="extraCheese"/>
           </label>
           <label>Sausage
-            <input type="radio" onChange={onChange} name="topping"/>
+            <input type="checkbox" onChange={onChange} name="topping" value="sausage"/>
           </label>
           <label>Mushroom
-            <input type="radio" onChange={onChange} name="topping"/>
+            <input type="checkbox" onChange={onChange} name="topping" value="mushroom"/>
           </label>
 
         </div>

@@ -1,5 +1,28 @@
 
+@media (min-width: 600px) {
+  .pizzaimage {
+    width: 50%;
+    height: 50vh;
+  }
+}
+
+.shop-button.md-button {
+  position:absolute;
+  top: 60%;
+  left:50%;
+ 
+}
 
 .pizzaimage {
-  width: 80%;
+  width: 100%;
+  height: 90vh;
+}
+
+
+.sizediv .sizes{
+  text-align-last:center;
+
+}
+.sizediv option{
+  padding-left:40px;
 }
