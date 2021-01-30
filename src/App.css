@@ -112,16 +112,26 @@ table {
   align-items: center;
 }
 
+.footerdiv p{
+  margin-top: 25px;
+  font-weight: 600;
+}
+
 .footerdiv nav{
   display:flex;
-  margin: 10px;
-  padding: 15px;
   
+  padding: 15px;
+  width: 400px;
+  justify-content: space-evenly;
  
 }
 
 .footerdiv ul{
   display: flex;
+}
+
+.footerdiv li{
+  margin:10px 20px;
 }
 
 .ordered img{

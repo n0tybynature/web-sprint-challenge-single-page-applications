@@ -24,7 +24,7 @@ export default function Home() {
         <Link to='/Form'>ORDER NOW!</Link>
       </button>
       <div className="footerdiv">
-        <h2>Lambda Pizza</h2>
+        <p>Lambda Pizza</p>
         <footer>
           <nav>
             <ul>
