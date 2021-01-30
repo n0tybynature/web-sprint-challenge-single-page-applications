@@ -27,9 +27,11 @@ export default function Home() {
         <h2>Lambda Pizza</h2>
         <footer>
           <nav>
-            <ul><a href="https://www.pizzahut.com/#/contactus" target="_blank">Contact Us</a></ul>
-            <ul><a href="https://blog.pizzahut.com/our-story/" target="_blank">Story</a></ul>
-            <ul><a href="https://jobs.pizzahut.com/" target="_blank">Careers Us</a></ul>
+            <ul>
+              <li><a href="https://www.pizzahut.com/#/contactus" target="_blank">Contact Us</a></li>
+              <li><a href="https://blog.pizzahut.com/our-story/" target="_blank">Story</a></li>
+              <li><a href="https://jobs.pizzahut.com/" target="_blank">Careers Us</a></li>
+            </ul>
           </nav>
         </footer>
       </div>

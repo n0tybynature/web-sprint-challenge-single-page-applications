@@ -110,11 +110,11 @@ const App = () => {
       <div className="app">  
         
         <nav>
-          <header><h1>Lambda Eats</h1>
+          <header><h1>Lambda Pizza</h1>
             <div className="nav-con">
               <ul>
-                <Link to="/">Home</Link> 
-                <Link to="/Order">Orders</Link>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/Order">Orders</Link></li>
               </ul>
             </div>
 

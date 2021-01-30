@@ -1,20 +1,21 @@
 import React from "react";
 import Pizza from "./Pizza"
+import photo from "./photos/photo.jpg"
 
 export default function Order({details}) {
-  if(!details){
-    return <h3>Waiting on Orders</h3>
-  }
+  
+
+  
 
 
   return (
     
     
     <div className="ordered">
-
-       <img src=""/>
+      <div className="imgdiv">
+       <img src={photo}/>
         <h1>CONGRATS</h1>
-
+      </div>
       
       {
         details.map( pizza => {
